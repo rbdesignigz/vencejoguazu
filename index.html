@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page Mejorada</title>
+
+  <!-- Tailwind CSS CDN -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+   <link href="./src/output.css" rel="stylesheet">
+
+  <!-- AOS Animations (librería ligera) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+
+  <!-- Font Awesome para íconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <script>
+    // Inicializar AOS cuando cargue la página
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+
+      // Modo oscuro
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const html = document.documentElement;
+
+      // Verificar preferencia guardada
+      if (localStorage.getItem('darkMode') === 'enabled') {
+        html.classList.add('dark');
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+
+      // Alternar modo oscuro
+      darkModeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        if (html.classList.contains('dark')) {
+          localStorage.setItem('darkMode', 'enabled');
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          localStorage.setItem('darkMode', 'disabled');
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+    });
+  </script>
+
+  <style>
+    /* Ajustes para modo oscuro en Tailwind */
+    .dark {
+      color-scheme: dark;
+    }
+    .dark .bg-white {
+      background-color: #111827;
+    }
+    .dark .text-gray-800 {
+      color: #e5e7eb;
+    }
+    .dark .text-gray-700 {
+      color: #d1d5db;
+    }
+    .dark .text-gray-600 {
+      color: #9ca3af;
+    }
+    .dark .bg-gray-50 {
+      background-color: #1f2937;
+    }
+    .dark .shadow {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    .dark .border-gray-300 {
+      border-color: #4b5563;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="bg-white dark:bg-gray-900 shadow-md fixed w-full top-0 z-50 transition-colors duration-300" id="navbar">
+  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">VencejoGUAZU</div>
+
+    <!-- Menú desktop -->
+    <div class="hidden md:flex space-x-8 items-center">
+      <a href="#hero" class="text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 transition">Inicio</a>
+      <a href="#productos" class="text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 transition">Productos</a>
+      <a href="#precios" class="text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 transition">Precios</a>
+      <a href="#galeria" class="text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 transition">Galería</a>
+      <a href="#reseñas" class="text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 transition">Reseñas</a>
+      <button id="darkModeToggle" class="ml-4 text-gray-700 dark:text-gray-200 focus:outline-none">
+        <!-- Se llena con JS -->
+      </button>
+    </div>
+
+    <!-- Botón móvil -->
+    <div class="flex items-center md:hidden">
+      <button id="darkModeToggle" class="mr-4 text-gray-700 dark:text-gray-200 focus:outline-none">
+        <!-- Se llena con JS -->
+      </button>
+      <button id="menuButton" class="text-gray-700 dark:text-gray-200 focus:outline-none">
+        <i id="menuIcon" class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú móvil fullscreen (overlay) -->
+  <div id="mobileMenu" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+    <div class="text-center text-white space-y-8">
+      <h2 class="text-3xl font-bold">Menú</h2>
+      <div class="space-y-6 text-2xl">
+        <a href="#hero" class="block hover:text-blue-400 transition" onclick="closeMenu()">Inicio</a>
+        <a href="#productos" class="block hover:text-blue-400 transition" onclick="closeMenu()">Productos</a>
+        <a href="#precios" class="block hover:text-blue-400 transition" onclick="closeMenu()">Precios</a>
+        <a href="#galeria" class="block hover:text-blue-400 transition" onclick="closeMenu()">Galería</a>
+        <a href="#reseñas" class="block hover:text-blue-400 transition" onclick="closeMenu()">Reseñas</a>
+      </div>
+      <button id="closeMenuButton" class="absolute top-6 right-6 text-white text-3xl focus:outline-none" onclick="closeMenu()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300" data-aos="fade-right">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white leading-tight text-center md:text-left">
+            Descubre Puerto Iguazú: Tu Aventura Comienza Aquí
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+          VencejoGUAZU - Viajes & Turismo, con mas de 10 años de experiencia, contamos con un equipo de profesionales altamente capacitados para brindarte el mejor servicio.
+        </p>
+        <button class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition">
+          Contactenos
+        </button>
+      </div>
+      <div class="md:w-1/2" data-aos="fade-left">
+        <img src="./img/cat-atardecer.png" alt="Hero" class="rounded-lg shadow-lg h-100 w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos con Buscador -->
+  <section id="productos" class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300" data-aos="fade-up">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10 dark:text-white">Nuestra cartera de viajes!</h2>
+
+      <!-- Buscador -->
+      <div class="max-w-md mx-auto mb-10">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar viajes..."
+          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <!-- Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+        <!-- Se mantienen las mismas cards -->
+        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/aer-traslados.png" alt="Aeropuerto de Puerto Iguazú" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-blue-400">ARG</strong> - Aeropuerto Puerto Iguazú</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Traslado desde la ciudad hacia el Aeropuerto de Puerto Iguazú</p>
+            <p class="mt-4 text-2xl font-bold text-blue-600 inline">AR$ 23.000</p> <p class="inline"> - ida</p>
+          </div>
+        </div>
+
+               <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/cat05.png" alt="Producto 1" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-blue-400">ARG</strong> - Cataratas Argentinas</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Traslado desde Puerto Iguazú hacia Cataratas ida y regreso a la ciudad u hotel.</p>
+            <p class="mt-4 text-2xl font-bold text-blue-600 inline">AR$ 46.000</p> <p class="inline"> - ida y vuelta</p>
+          </div>
+        </div>
+
+               <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/cat-06.png" alt="Producto 1" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-blue-400">ARG</strong> - Cataratas + Aeropuerto</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Cataratas Argentinas mas Aeropuerto Argentino</p>
+            <p class="mt-4 text-2xl font-bold text-blue-600 inline">AR$ 61.000</p> <p class="inline"> - ida y vuelta</p>
+          </div>
+        </div>
+
+               <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/cat-atardecer.png" alt="Producto 1" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-blue-400">ARG</strong> - Cataratas + Minas de Wanda</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Cataratas Argentinas mas Minas de Wanda, visite una de las siete maravillas y luego las mejores piedras preciosas de la zona.</p>
+            <p class="mt-4 text-2xl font-bold text-blue-600 inline">AR$ 84.000</p> <p class="inline"> - ida y vuelta</p>
+          </div>
+        </div>
+
+               <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/cat02.png" alt="Producto 1" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-blue-400">ARG</strong> - Minas de Wanda</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Visite una de las siete maravillas y luego las mejores piedras preciosas de la zona.</p>
+            <p class="mt-4 text-2xl font-bold text-blue-600 inline">AR$ 67.000</p> <p class="inline"> - ida y vuelta</p>
+          </div>
+        </div>
+
+               <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/cat02.png" alt="Producto 1" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-green-700">BRA</strong> - Aeropuerto Brasil</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Desde la ciudad de puerto Iguazú hacia el Aeropuerto de Brasil.</p>
+            <p class="mt-4 text-2xl font-bold text-slate-600 inline">AR$ 47.000</p> <p class="inline"> - ida - 4 PAX</p>
+          </div>
+        </div>
+
+             <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/cat02.png" alt="Producto 1" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-green-700">BRA</strong> - Terminal de Omnibus Brasil</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Terminal de omnibus de Brasil.</p>
+            <p class="mt-4 text-2xl font-bold text-slate-600 inline">AR$ 55.000</p> <p class="inline"> - ida - 4 PAX</p>
+          </div>
+        </div>
+
+
+              <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/cat02.png" alt="Producto 1" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-red-500">PAR</strong> - Tour de compras PY</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Te llevamos desde Puerto Iguazú hacia Paraguay, compra lo último en tecnología sin impuestos a los mejores precios de Latinoamerica.</p>
+            <p class="mt-4 text-2xl font-bold text-slate-600 inline">AR$ 97.000</p> <p class="inline"> - ida y vuelta - 4 PAX</p><br>
+            <p class="mt-4 text-2xl font-bold text-slate-600 inline">AR$ 117.000</p> <p class="inline"> - ida y vuelta - 6 PAX</p>
+          </div>
+        </div>
+
+              <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="./img/cat02.png" alt="Producto 1" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold dark:text-white"><strong class="text-red-500">PAR</strong> - Aeropuerto PY</h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-300">Te llevamos desde Puerto Iguazú hacia el Aeropuerto de Ciudad del Este - Paraguay.</p>
+            <p class="mt-4 text-2xl font-bold text-slate-600 inline">AR$ 133.000</p> <p class="inline"> - ida - 4 PAX</p><br>
+            <p class="mt-4 text-2xl font-bold text-slate-600 inline">AR$ 168.000</p> <p class="inline"> - ida - 6 PAX</p>
+          </div>
+        </div>
+
+        <!-- Repetir otras 5 cards (igual que antes, pero con dark:text) -->
+        <!-- ... (copiar las otras 5 cards del código anterior, ya están adaptadas arriba) ... -->
+        <!-- Por brevedad no repito todas, pero asegúrate de que cada <p>, <h3> tenga dark:text-... -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Precios -->
+  <section id="precios" class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" data-aos="fade-up">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12 dark:text-white">Planes de Suscripción</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Plan Standard -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8 hover:scale-105 transition transform">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Standard</h3>
+          <div class="mt-4 text-4xl font-bold text-blue-600">$19<span class="text-lg text-gray-600 dark:text-gray-300">/mes</span></div>
+          <ul class="mt-6 space-y-3 text-gray-600 dark:text-gray-300">
+            <li>✔️ 5 usuarios</li>
+            <li>✔️ 10 GB de almacenamiento</li>
+            <li>✔️ Soporte por email</li>
+            <li>✖️ Sin integraciones</li>
+          </ul>
+          <button class="mt-8 w-full bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 text-gray-800 dark:text-white font-semibold py-2 rounded-lg">
+            Elegir Plan
+          </button>
+        </div>
+
+        <!-- Plan Empresa -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8 border-2 border-blue-500 hover:scale-105 transition transform">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Empresa</h3>
+          <div class="mt-4 text-4xl font-bold text-blue-600">$49<span class="text-lg text-gray-600 dark:text-gray-300">/mes</span></div>
+          <ul class="mt-6 space-y-3 text-gray-600 dark:text-gray-300">
+            <li>✔️ 25 usuarios</li>
+            <li>✔️ 100 GB de almacenamiento</li>
+            <li>✔️ Soporte prioritario</li>
+            <li>✔️ Integraciones API</li>
+          </ul>
+          <button class="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg">
+            Elegir Plan
+          </button>
+        </div>
+
+        <!-- Plan Full -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-8 hover:scale-105 transition transform">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Full</h3>
+          <div class="mt-4 text-4xl font-bold text-blue-600">$99<span class="text-lg text-gray-600 dark:text-gray-300">/mes</span></div>
+          <ul class="mt-6 space-y-3 text-gray-600 dark:text-gray-300">
+            <li>✔️ Usuarios ilimitados</li>
+            <li>✔️ Almacenamiento ilimitado</li>
+            <li>✔️ Soporte 24/7</li>
+            <li>✔️ Personalización completa</li>
+          </ul>
+          <button class="mt-8 w-full bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 text-gray-800 dark:text-white font-semibold py-2 rounded-lg">
+            Elegir Plan
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section id="galeria" class="py-16" data-aos="fade-in">
+    <div class="relative h-96 md:h-[500px] overflow-hidden rounded-xl mx-6">
+      <img src="https://via.placeholder.com/1600x900/1e40af/ffffff?text=Galer%C3%ADa+de+Trabajo" alt="Galería" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+        <div class="text-center text-white">
+          <h2 class="text-4xl md:text-5xl font-bold">Nuestra Galería</h2>
+          <p class="mt-4 text-lg">Descubre cómo trabajamos y los resultados que entregamos.</p>
+          <button class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg">
+            Ver Más
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reseñas -->
+  <section id="reseñas" class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300" data-aos="fade-up">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10 dark:text-white">Lo que Dicen Nuestros Clientes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow">
+          <div class="text-yellow-400 text-lg">★★★★★</div>
+          <p class="mt-4 text-gray-600 dark:text-gray-300">"Excelente servicio, muy profesional y rápido. Recomendado 100%."</p>
+          <p class="mt-4 font-semibold">— Ana G., Madrid</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow">
+          <div class="text-yellow-400 text-lg">★★★★★</div>
+          <p class="mt-4 text-gray-600 dark:text-gray-300">"La plataforma es intuitiva y el soporte responde en minutos. Muy contento."</p>
+          <p class="mt-4 font-semibold">— Carlos M., México</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow">
+          <div class="text-yellow-400 text-lg">★★★★☆</div>
+          <p class="mt-4 text-gray-600 dark:text-gray-300">"Buen producto, aunque faltaría más documentación. Pero en general muy bien."</p>
+          <p class="mt-4 font-semibold">— Lucía R., Argentina</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="mb-8 md:mb-0">
+          <h3 class="text-2xl font-bold text-blue-400">Brand</h3>
+          <p class="mt-2 text-gray-400">Innovando para tu éxito desde 2020.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="font-semibold mb-4">Enlaces</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white transition">Inicio</a></li>
+              <li><a href="#" class="hover:text-white transition">Productos</a></li>
+              <li><a href="#" class="hover:text-white transition">Precios</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Soporte</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white transition">Contacto</a></li>
+              <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+              <li><a href="#" class="hover:text-white transition">Documentación</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Legal</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white transition">Términos</a></li>
+              <li><a href="#" class="hover:text-white transition">Privacidad</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-gray-800 text-center text-gray-500">
+        &copy; 2025 Brand. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para menú móvil y buscador -->
+<script>
+  // Menú móvil
+  const menuButton = document.getElementById('menuButton');
+  const menuIcon = document.getElementById('menuIcon');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuButton.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('hidden')) {
+      // Abrir menú
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+      }, 10);
+    } else {
+      // Cerrar menú
+      mobileMenu.classList.add('hidden');
+      menuIcon.classList.remove('fa-times');
+      menuIcon.classList.add('fa-bars');
+    }
+  });
+
+  function closeMenu() {
+    mobileMenu.classList.add('hidden');
+    menuIcon.classList.remove('fa-times');
+    menuIcon.classList.add('fa-bars');
+  }
+
+  // Cerrar menú al hacer scroll (opcional)
+  window.addEventListener('scroll', () => {
+    if (!mobileMenu.classList.contains('hidden')) {
+      closeMenu();
+    }
+  });
+
+  // Buscador (sin cambios)
+  document.getElementById("searchInput").addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".product-card");
+    
+    cards.forEach(card => {
+      const title = card.querySelector("h3").textContent.toLowerCase();
+      const desc = card.querySelector("p").textContent.toLowerCase();
+      if (title.includes(query) || desc.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+</body>
+</html>
