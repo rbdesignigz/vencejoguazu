@@ -152,7 +152,7 @@
             <img src="./img/autos.jpeg" class="w-full h-full md:h-96 xl:h-120 object-cover" alt="Garganta del Diablo Iguazú">
             <div class="absolute inset-0 bg-opacity-40 flex flex-col justify-end items-center text-white p-6">
                 <h2 class="text-4xl md:text-5xl font-bold mb-2">Vehiculos</h2>
-                <p class="text-lg md:text-xl text-center">viaje seguro en nuestra flota de vehiculos.</p>
+                <p class="text-lg md:text-xl text-center">Traslados privados desde el corazón de la triple frontera.</p>
             </div>
         </div>
     </div>
@@ -201,7 +201,7 @@
       <div class="md:w-1/2 mb-10 md:mb-0">
 
         <p class=" text-lg text-gray-600 dark:text-gray-300">
-          Somos una empresa de taxis, estamos a tu disposición en la triple frontera de Argentina, Brasil y Paraguay. Servicio de Traslados de primer nivel en Puerto Iguazú Misiones.
+          Ofrecemos un servicio profesional, cómodo y seguro, ideal para quienes visitan las Cataratas del Iguazú y desean viajar con confianza, atención personalizada y precios accesibles.
         </p>
         <button class=" bg-blue-600 mt-6  hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition">
           Contactenos
@@ -225,416 +225,68 @@
   <!-- Productos con Buscador -->
   <section id="productos" class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300" data-aos="fade-up">
     <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-10 dark:text-white">Destinos imperdibles</h2>
-      <p>Elegí tu próxima experiencia por Iguazú, Foz y alrededores.</p>
-      <br>
-
-      <!-- Buscador -->
-<!--       <div class="max-w-md mx-auto mb-10">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Buscar viajes..."
-          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div> -->
-
-
-
-      <!-- Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
-        <!-- Se mantienen las mismas cards -->
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition relative">
-          <!-- Bandera argentina sola, en la esquina superior izquierda -->
-          <img src="./img/flag-arg.webp" alt="Bandera Argentina" class="absolute top-8 left-8 h-6 w-auto  shadow" />
-
-          <!-- Imagen con márgenes en todos los lados y bordes redondeados -->
-          <div class="p-3">
-            <img src="./img/cat-atardecer.png" alt="Cataratas Argentinas" class="w-full h-48 object-cover rounded-lg">
-          </div>
-
-          <div class="p-5 text-center pt-2">
-            <h3 class="text-2xl font-bold dark:text-white">Cataratas Argentinas</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300"></p>
-            
- 
-           <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-<button command="show-modal" commandfor="dialog" class="rounded-md bg-gray-950/5 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-gray-950/10">mas info</button>
-<el-dialog>
-  <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
-    <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
-
-    <div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
-      <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-          <div class="sm:flex sm:items-start">
-            <!-- <div class="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:size-10">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-red-600">
-                <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div> -->
-            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-              <h3 id="dialog-title" class="text-base font-semibold text-gray-900">Cataratas Argentinas</h3>
-              <div class="mt-2">
-                <p class="text-sm text-gray-500">Explorar el Parque Nacional Iguazú, una de las 7 maravillas del mundo, es una experiencia que no puede faltar en tu viaje. Con más de un millón de visitantes al año, combina naturaleza, aventura y emoción en un entorno simplemente inolvidable.</p>
-                <br>
-                <p class="text-sm text-gray-500">Horarios: Todos los dias de 08:00hs a 18:00hs.</p>
-                <p class="text-sm text-gray-500">Duración: 3/6hs aproximadamente.</p>
-                <p class="text-sm text-gray-500">Requisitos: DNI o Pasaporte.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-          <!-- <button type="button" command="close" commandfor="dialog" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto">Deactivate</button> -->
-          <button type="button" command="close" commandfor="dialog" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs inset-ring inset-ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">volver</button>
-        </div>
-      </el-dialog-panel>
-    </div>
-  </dialog>
-</el-dialog>
-
-
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-800 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              contactar
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/cat05.png" alt="Cataratas Brasileras" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-green-600 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-br.webp" alt="Cataratas Brasileras" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">BRA</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Cataratas Brasileras</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Circuito panorámico y vistas espectaculares.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-green-600 hover:bg-green-800 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/Saltos_del_Monday.jpg" alt="Saltos del Monday Presidente Franco" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-red-500 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-py.png" alt="Saltos del Monday Presidente Franco" class="h-6 w-9 object-cover">
-            <p class="flex-1 text-right mr-2">PAR</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Saltos del Monday Presidente Franco</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Impresionantes saltos de agua en Paraguay.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-red-500 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/saltos-del-moconajpg.webp" alt="Saltos del Moconá" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Saltos del Moconá" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Saltos del Moconá</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Cataratas longitudinales únicas en el mundo.
-              Tener en cuenta el tema del rio, Reservar con dos dias el nivel del rio.
-            </p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/itaipu.jpeg" alt="Represa Hidroeléctrica Itaipu Binacional" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-green-600 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-br.webp" alt="Represa Hidroeléctrica Itaipu Binacional" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">BRA</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Represa Hidroeléctrica Itaipu Binacional</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">La mayor generadora de energía limpia y renovable.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-green-600 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/minas_wanda.jpg" alt="Minas de Wanda" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Minas de Wanda" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Minas de Wanda</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Descubre piedras preciosas y geodas únicas.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/san-ignacio.jpg" alt="Ruinas de San Ignacio" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Ruinas de San Ignacio" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Ruinas de San Ignacio</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Patrimonio Mundial de la Humanidad UNESCO.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/Flor-de-Jardin.jpg" alt="Yerbatera Flor del Jardín" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Yerbatera Flor del Jardín" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Yerbatera Flor del Jardín</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Visita y degustación de yerba mate artesanal.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/icebar-iguazu.jpg" alt="Bar de Hielo" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Bar de Hielo" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Bar de Hielo</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Experiencia única en un bar completamente helado.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/guira-oga-iguazu.jpg" alt="Güira Ora" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Güira Ora" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Güira Ora</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Centro de rescate y rehabilitación de fauna silvestre.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/la-aripuca.jpg" alt="Aripuca" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Aripuca" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Aripuca</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Monumento ecológico construido con árboles nativos.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/parque-das-aves-br.jpg" alt="Parque das Aves" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-green-700 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-br.webp" alt="Parque das Aves" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">BRA</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Parque das Aves</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Santuario de aves exóticas y autóctonas.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-green-700 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/duty-free-shop-puerto.jpg" alt="Duty Free Shop Puerto Iguazú" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Duty Free Shop Puerto Iguazú" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Duty Free Shop Puerto Iguazú</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Compras libres de impuestos en la frontera.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/cruceros-puerto-iguazu.jpg" alt="Catamarán Cruceros Iguazú" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Catamarán Cruceros Iguazú" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Catamarán Cruceros Iguazú</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Paseos en barco por el río Iguazú.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/hito-tres-fronteras.jpg" alt="Excursión al Hito de las Tres Fronteras" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Excursión al Hito de las Tres Fronteras" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Excursión al Hito de las Tres Fronteras</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Donde se unen Argentina, Brasil y Paraguay.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/fly-park-iguazu.avif" alt="Fly Park Iguazú" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Fly Park Iguazú" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Fly Park Iguazú</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Parque de aventuras y tirolesas.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/jardin-de-los-picaflores.jpg" alt="Jardin de los Colibríes" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Jardin de los picaflores" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Jardin de los Picaflores</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Observación de aves y naturaleza.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/la-casa-de-botellas.jpg" alt="La Casa de Botellas" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="La Casa de Botellas" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">La Casa de Botellas</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Construcción ecológica hecha con botellas recicladas.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/Feria-Ferinha-Iguazu-6.webp" alt="Feirinha Puerto Iguazú" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Feirinha Puerto Iguazú" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Feirinha Puerto Iguazú</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Mercado de productos regionales y comidas típicas.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/Yup-Star-1.jpg" alt="Yup Star: Rueda Gigante" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-green-700 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-br.webp" alt="Yup Star: Rueda Gigante" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">BRA</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Yup Star: Rueda Gigante</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">La rueda gigante de Foz do Iguazú.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-green-700 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/culturas-park.jpg" alt="Culturas Parks Iguazú" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="Culturas Parks Iguazú" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Culturas Parks Iguazú</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Parque temático de culturas regionales.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/foz-de-iguazu-brasil.webp" alt="Foz do Iguazú" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-green-700 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-br.webp" alt="Foz do Iguazú" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">BRA</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Foz do Iguazú</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Ciudad brasileña con múltiples atracciones.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-green-700 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/ciudad-del-este.jpg" alt="Ciudad del Este" class="w-full h-48 object-cover">
-          <div class="h-6 text-center bg-red-500 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-py.png" alt="Ciudad del Este" class="h-6 w-9 object-cover">
-            <p class="flex-1 text-right mr-2">PAR</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">Ciudad del Este</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Centro comercial y tecnológico de Paraguay.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-red-500 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-          <img src="./img/biocentro.jpg" alt="BioCentro Iguazú" class="w-full h-48 object-top-left object-cover">
-          <div class="h-6 text-center bg-blue-400 text-white font-bold flex w-full items-center">
-            <img src="./img/flag-arg.webp" alt="BioCentro Iguazú" class="h-6 object-cover">
-            <p class="flex-1 text-right mr-2">ARG</p>
-          </div>
-          <div class="p-5 text-center">
-            <h3 class="text-2xl font-bold dark:text-white">BioCentro Iguazú</h3>
-            <p class="mt-2 text-gray-600 dark:text-gray-300">Jardín botánico y mariposario.</p>
-            <a href="https://wa.me/543757500099" class="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-3 px-8 mt-4 rounded-full transition-all duration-300 transform hover:scale-105">
-              Contactar
-            </a>
-          </div>
-        </div>
       
-      </div>
+      
 
 
-        
+          <section class="p-6 bg-gray-50">
+              <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                  Explora la Triple Frontera
+              </h2>
+              <div class="grid gap-6 md:grid-cols-3">
+                  
+                  <a href="./es-ar.html" class="block">
+                      <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02] overflow-hidden border border-gray-200 h-full">
+                          <div class="p-6">
+                              <h3 class="text-2xl font-semibold mb-2 text-blue-600">
+                                  Argentina
+                              </h3>
+                              <p class="text-gray-600 mb-4">
+                                  Descubre la majestuosidad de las Cataratas del Iguazú. Hay muchos destinos increíbles para explorar.
+                              </p>
+                              <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                                  Ver Destinos
+                              </span>
+                          </div>
+                      </div>
+                  </a>
 
+                  <a href="./es-br.html"  class="block">
+                      <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02] overflow-hidden border border-gray-200 h-full">
+                          <div class="p-6">
+                              <h3 class="text-2xl font-semibold mb-2 text-green-600">
+                                  Brasil
+                              </h3>
+                              <p class="text-gray-600 mb-4">
+                                  Te llevamos a un tour de compras por Ciudad del Este, viajas seguro con nosotros y encontratás los mejores precios en los productos.
+                              </p>
+                              <span class="inline-block bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+                                  Ver Destinos
+                              </span>
+                          </div>
+                      </div>
+                  </a>
 
-        
+                  <a href="./es-py.html"  class="block">
+                      <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.02] overflow-hidden border border-gray-200 h-full">
+                          <div class="p-6">
+                              <h3 class="text-2xl font-semibold mb-2 text-red-600">
+                                  Paraguay
+                              </h3>
+                              <p class="text-gray-600 mb-4">
+                                  Conoce la represa de Itaipú, el encanto de Asunción y las ruinas jesuíticas de la Ruta de la Fe.
+                              </p>
+                              <span class="inline-block bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full justify-center">
+                                  Ver Destinos
+                              </span>
+                          </div>
+                      </div>
+                  </a>
+                  
+              </div>
+          </section>
+
+     
 
         <!-- Repetir otras 5 cards (igual que antes, pero con dark:text) -->
         <!-- ... (copiar las otras 5 cards del código anterior, ya están adaptadas arriba) ... -->
@@ -646,13 +298,13 @@
   <section>
     
     
-      <div class="text-center mb-8" data-aos="fade-up">
+     <!--  <div class="text-center mb-8" data-aos="fade-up">
           <h2 class="text-3xl font-bold dark:text-white">Nuestra Flota</h2>
           Vehículos modernos y seguros para todos tus traslados.
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
-        <!-- Se mantienen las mismas cards -->
+        
         <div class="product-card p-6 bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
           <img src="./img/auto-cronos.png" alt="Fiat Cronos" class="w-full h-68 object-cover bg-slate-200 rounded-2xl">
 
@@ -683,7 +335,7 @@
 
 
       </div>
-  </section>
+  </section> -->
 
   <!-- Galería -->
   <section id="galeria" class="py-16" data-aos="fade-in">
@@ -742,7 +394,7 @@
       <div class="flex flex-col md:flex-row justify-between">
         <div class="mb-8 md:mb-0">
           <h3 class="text-2xl font-bold text-blue-400">vencejoGUAZU</h3>
-          <p class="mt-2 text-gray-400">Traslados en puerto Iguazú desde 2015, con mas de 10 años de experiencia.</p>
+          <p class="mt-2 text-gray-400">Gracias por elegirnos. Tu confianza nos inspira a seguir ofreciendo viajes seguros, confortables y con la atención que te merecés</p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
           <div>
